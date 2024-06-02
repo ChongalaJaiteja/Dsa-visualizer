@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .light {
+    --color-primary: #1f2937;
+    --color-secondary: #1a202c;
+    --color-accent: #60a5fa;
+    --color-card: #2d3748;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+  }
+  .dark {
+    --color-primary: #ffffff;
+    --color-secondary: #f8fafc;
+    --color-accent: #3b82f6;
+    --color-card: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+  }
+}
+
+@layer components {
+  .accordion {
+    @apply overflow-hidden rounded-lg border border-gray-300 dark:border-gray-700 !important;
+  }
+  .accordion-summary {
+    @apply cursor-pointer bg-white capitalize !important;
+  }
+
+  .accordion-details {
+    @apply p-4 !important;
+  }
+}

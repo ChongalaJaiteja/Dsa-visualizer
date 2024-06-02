@@ -1,9 +1,12 @@
-function App() {
+import BubbleSortVisualizer from "./components/sorting";
+import Navbar from "./components/navbar";
+
+const App = () => {
   return (
-    <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-      hi
-    </button>
+    <div className="font-app flex h-screen flex-col">
+      <Navbar />
+    </div>
   );
-}
+};
 
 export default App;
