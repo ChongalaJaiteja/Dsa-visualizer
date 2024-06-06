@@ -1,12 +1,13 @@
+import Navbar from "./navbar";
 import { Outlet } from "react-router-dom";
 
-const Sorting = () => {
+const Layout = () => {
     return (
         <>
-            <h1>Sorting</h1>
+            <Navbar />
             <Outlet />
         </>
     );
 };
 
-export default Sorting;
+export default Layout;
