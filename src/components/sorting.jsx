@@ -83,26 +83,30 @@ const Sorting = () => {
             </div>
 
             <form
-                className="bg-red-200 p-3"
+                className="flex flex-col gap-4 bg-green-400 p-3 sm:flex-row"
                 onBlur={handleBlur}
                 onSubmit={(e) => e.preventDefault()}
             >
-                <button
-                    onClick={generateArray}
-                    className="rounded-3xl bg-blue-600 p-2 capitalize text-white"
-                >
-                    generate
-                </button>
-                <select
-                    onChange={onChangeGenerateOption}
-                    value={generateOption}
-                >
-                    <option value="0">random</option>
-                    <option value="1">ascending</option>
-                    <option value="-1">descending</option>
-                </select>
+                <div className="flex gap-4 outline">
+                    <button
+                        onClick={generateArray}
+                        className="grow rounded-lg bg-blue-600  p-1.5  capitalize text-white"
+                    >
+                        generate
+                    </button>
+                    <select
+                        className="grow rounded-lg capitalize"
+                        onChange={onChangeGenerateOption}
+                        value={generateOption}
+                    >
+                        <option value="0">random</option>
+                        <option value="1">ascending</option>
+                        <option value="-1">descending</option>
+                    </select>
+                </div>
+
                 <input
-                    className={`w-full placeholder:capitalize ${input === "" ? "outline outline-red-600" : ""}`}
+                    className={` rounded-lg p-2 outline-none placeholder:capitalize ${input === "" ? "outline outline-red-600 " : ""}`}
                     placeholder="number to sort (comma separate - max 3 digits)"
                     value={input}
                     onChange={handleChange}
